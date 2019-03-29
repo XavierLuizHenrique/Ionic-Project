@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      
+      <ion-icon name="arrow-dropright-circle"></ion-icon>
+    </button>
+    <ion-title>Contato</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+<!-- 4. Inserir o formGroup -->
+
+<form [formGroup]='formGroup' (ngSubmit)="enviarMensagem()">
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <!-- 5. Inserir o FormControlName em todos os inputs -->
+      <ion-input formControlName="nome" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input formControlName="email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Assunto</ion-label>
+      <ion-input formControlName="assunto" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Mensagem</ion-label>
+      <ion-textarea formControlName="mensagem" rows="6"></ion-textarea>
+    </ion-item>
+  
+  </ion-list>
+
+  <button ion-button full color="dark" outline>Enviar</button>
+
+</form>
+
+
+
+</ion-content>
