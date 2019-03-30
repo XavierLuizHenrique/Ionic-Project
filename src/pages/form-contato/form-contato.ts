@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
 @IonicPage()
@@ -16,15 +16,16 @@ export class FormContatoPage {
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
-      public formBuilder : FormBuilder //2. Inserir o Form no construtor, importar
+      public formBuilder : FormBuilder, //2. Inserir o Form no construtor, importar
+      public alertCtrl: AlertController
     ) {
 
   //3. Iniciar o FormBuilder com os campos do formulário do html  
     this.formGroup = this.formBuilder.group({
-      nome: [''],
-      email: [''],
-      assunto: ['Suporte'],
-      mensagem: ['']
+      nome: ['',[Validators.required,Validators.minLength(4), Validators.maxLength(20)]],
+      email: ['',[Validators.required,Validators.email]],
+      assunto: ['Suporte',[Validators.required,Validators.minLength(4), Validators.maxLength(20)]],
+      mensagem: ['',[Validators.required]]
     })
   }
 
@@ -33,7 +34,18 @@ export class FormContatoPage {
   }
 
   enviarMensagem(){
-    console.log(this.formGroup.value  );
+    console.log(this.formGroup.value);
+    this.showAlert();
+    this.navCtrl.setRoot('HomePage');
+  }
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
 }

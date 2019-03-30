@@ -21,28 +21,30 @@
       <!-- 5. Inserir o FormControlName em todos os inputs -->
       <ion-input formControlName="nome" type="text"></ion-input>
     </ion-item>
+    <p *ngIf="formGroup.controls.nome.errors && formGroup.controls.nome.dirty " margin-left>Nome Inválido</p>
   
     <ion-item>
       <ion-label floating>Email</ion-label>
       <ion-input formControlName="email" type="text"></ion-input>
     </ion-item>
+    <p *ngIf="formGroup.controls.email.errors && formGroup.controls.email.dirty " margin-left>Email Inválido</p>
 
     <ion-item>
       <ion-label floating>Assunto</ion-label>
       <ion-input formControlName="assunto" type="text"></ion-input>
     </ion-item>
+    <p *ngIf="formGroup.controls.assunto.errors && formGroup.controls.assunto.dirty " margin-left>Nome Inválido</p>
 
     <ion-item>
       <ion-label floating>Mensagem</ion-label>
       <ion-textarea formControlName="mensagem" rows="6"></ion-textarea>
     </ion-item>
+    <p *ngIf="formGroup.controls.mensagem.errors && formGroup.controls.mensagem.dirty " margin-left>Nome Inválido</p>
   
   </ion-list>
 
-  <button ion-button full color="dark" outline>Enviar</button>
+  <button ion-button full color="dark" outline [disabled]="formGroup.invalid">Enviar</button>
 
 </form>
-
-
 
 </ion-content>
