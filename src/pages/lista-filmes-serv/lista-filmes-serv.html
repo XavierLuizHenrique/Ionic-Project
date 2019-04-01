@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      
+      <ion-icon name="arrow-dropright-circle"></ion-icon>
+    </button>
+    <ion-title>Lista de Filmes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-content class="card-background-page" >
+    <ion-card *ngFor="let f of filmes">
+      <img src="{{f.imagem}}"  style="opacity: 0.5;"/>
+      <div class="card-title">{{f.nomeFilme}}</div>
+    </ion-card>
+  </ion-content>
+</ion-content>
+
