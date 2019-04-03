@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FilmeService } from '../services/filme.service';
 import { ClientService } from '../services/cliente.service';
+import { EnderecoService } from '../services/endereco.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ClientService } from '../services/cliente.service';
     SplashScreen,
     FilmeService,
     ClientService,
+    EnderecoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

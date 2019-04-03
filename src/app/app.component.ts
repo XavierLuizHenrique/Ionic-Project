@@ -3,8 +3,6 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +24,9 @@ export class MyApp {
       { title: 'Teste', component: 'TesteIonicPage' },
       { title: 'Contato', component: 'FormContatoPage'},
       { title: 'Lista Filmes', component: 'ListaFilmesServPage'},
-      { title: 'Lista Clientes', component: 'ListaClentesServPage'}
+      { title: 'Lista Clientes', component: 'ListaClentesServPage'},
+      { title: 'Endereco', component: 'BuscaEnderecoPage'},
+
     ];
 
   }
