@@ -10,6 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FilmeService } from '../services/filme.service';
 import { ClientService } from '../services/cliente.service';
 import { EnderecoService } from '../services/endereco.service';
+import { noticiaService } from '../services/noticia.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { EnderecoService } from '../services/endereco.service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,6 +31,7 @@ import { EnderecoService } from '../services/endereco.service';
     FilmeService,
     ClientService,
     EnderecoService,
+    noticiaService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

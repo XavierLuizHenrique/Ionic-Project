@@ -26,6 +26,7 @@ export class MyApp {
       { title: 'Lista Filmes', component: 'ListaFilmesServPage'},
       { title: 'Lista Clientes', component: 'ListaClentesServPage'},
       { title: 'Endereco', component: 'BuscaEnderecoPage'},
+      { title: 'Lista Notícias', component: 'ListaNoticiasPage'}
 
     ];
 

@@ -9,6 +9,6 @@ export class EnderecoService{
     constructor(private http: HttpClient) {
     }
     buscaCEP(cep : string) : Observable<Endereco>{
-        return this.http.get<Endereco>(`https://viacep.com.br/ws/${cep}/json/`);
+        return this.http.get<Endereco>(`http://viacep.com.br/ws/${cep}/json/`);
     }
 }
