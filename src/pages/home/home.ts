@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController, IonicPage, AlertController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, IonicPage, MenuController, ToastController } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   selector: 'page-home',
@@ -8,35 +9,36 @@ import { NavController, IonicPage, AlertController } from 'ionic-angular';
 @IonicPage()
 export class HomePage {
 
-  nomes : any[] = [
-    {'nome' : 'Caio'},
-    {'nome' : 'Adryanno'},
-    {'nome' : 'Alessandra'},
-    {'nome' : 'Geycy'},
-    {'nome' : 'Regina'} 
-  ]
+  @ViewChild('email') email;
+  @ViewChild('senha') senha;
 
-  constructor(public navCtrl: NavController,
-    public alertCtrl: AlertController) {
+  constructor(public fireAuth : AngularFireAuth,
+  public menu : MenuController,
+  public toastCtrl: ToastController) {
 
   }
 
-  olaMundo(){
-    console.log('Olá Mundo Mobile!');
-    this.showAlert();
+  login(){
+    this.fireAuth.auth.signInWithEmailAndPassword(this.email.value,this.senha.value).then(()=>{
+      this.presentToast("Logado com sucesso!");
+    }).catch(()=>{
+      this.presentToast("Usuário inválido");
+    })
   }
 
-  irParaTeste(){
-    this.navCtrl.push('TesteIonicPage')
-    // this.navCtrl.setRoot('TesteIonicPage') -  Sem seta para retorno
+  cadastrar(){
+    this.fireAuth.auth.createUserWithEmailAndPassword(this.email.value,this.senha.value).then(()=>{
+      this.presentToast("Cadastrado com sucesso!");
+    }).catch(()=>{
+      this.presentToast("Usuário inválido");
+    })
   }
 
-  showAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'Coé Rapaziada!',
-      subTitle: 'Vamos aprender Mobile?',
-      buttons: ['OK']
+  presentToast(msg : string) {
+    const toast = this.toastCtrl.create({
+      message: msg,
+      duration: 3000
     });
-    alert.present();
+    toast.present();
   }
 }
