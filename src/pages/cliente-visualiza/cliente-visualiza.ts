@@ -4,6 +4,7 @@ import { Cliente } from '../../model/cliente';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import firebase from 'firebase';
 
+
 @IonicPage()
 @Component({
   selector: 'page-cliente-visualiza',
@@ -15,6 +16,8 @@ export class ClienteVisualizaPage {
   firestore = firebase.firestore();
   settings = {timestampsInSnapshots : true};
   cliente = new Cliente();
+
+  imagem : string = "";
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -31,6 +34,10 @@ export class ClienteVisualizaPage {
               })
             }
 
+    ionViewDidLoad(){
+      this.DownloadFoto();
+    }
+
   atualizar(){
     let ref =this.firestore.collection('cliente')
     ref.doc(this.cliente.id).set(this.formGroup.value)
@@ -42,4 +49,24 @@ export class ClienteVisualizaPage {
     })
   }
 
+  enviarArquivo(event){
+    let imagem = event.srcElement.files[0];
+    //console.log(imagem.name)
+    let ref = firebase.storage().ref()
+                  .child(`clientes/${this.cliente.id}.jpg`);
+
+    ref.put(imagem).then(url=>{
+      console.log("Enviado com sucesso");
+      this.DownloadFoto();
+    }) 
+  }
+
+  DownloadFoto(){
+    let ref = firebase.storage().ref()
+                  .child(`clientes/${this.cliente.id}.jpg`);
+
+    ref.getDownloadURL().then( url=>{
+      this.imagem = url;
+    })
+  } 
 }

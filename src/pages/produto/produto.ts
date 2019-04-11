@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import firebase from 'firebase'
+import firebase from 'firebase';
 
 
 @IonicPage()
 @Component({
-  selector: 'page-novo-cliente', 
-  templateUrl: 'novo-cliente.html',
+  selector: 'page-produto',
+  templateUrl: 'produto.html',
 })
-export class NovoClientePage {
+export class ProdutoPage {
 
   formGroup : FormGroup;
-
   firestore = firebase.firestore(); //Inicio um instancia do banco 
   settings = {timestampsInSnapshots : true} //linha sempre utilizada(padrão)
 
@@ -23,21 +22,22 @@ export class NovoClientePage {
                 this.firestore.settings(this.settings);
 
                 this.formGroup = this.formBuilder.group({
-                  nome : [''],
-                  telefone : [''],
-                  email : [''],           
+                  nomeProduto : [''],
+                  preco : [''],
+                  categoria : [''],           
+                  descricao : [''],
                 })
   }
 
   cadastrar(){
-      let ref =this.firestore.collection('cliente')
-      ref.add(this.formGroup.value)
-        .then(resp =>{
-        console.log('Cadastrado com sucesso');
-        this.navCtrl.setRoot('InicioPage');
-      }).catch(()=>{
-        console.log('Erro ao cadastrar');
-      })
+    let ref =this.firestore.collection('produto')
+    ref.add(this.formGroup.value)
+      .then(resp =>{
+      console.log('Cadastrado com sucesso');
+      this.navCtrl.setRoot('InicioPage');
+    }).catch(()=>{
+      console.log('Erro ao cadastrar');
+    })
 
   }
 

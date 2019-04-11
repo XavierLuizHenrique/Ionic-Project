@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 import firebase from 'firebase';
 import { Cliente } from '../../model/cliente';
 import { query } from '@angular/core/src/animation/dsl';
+import { Produto } from '../../model/produto';
 
 @IonicPage()
 @Component({
@@ -14,6 +15,8 @@ export class InicioPage {
     listaDeClientes : Cliente[] = [];
     firestore = firebase.firestore(); //Inicio um instancia do banco 
     settings = {timestampsInSnapshots : true} //linha sempre utilizada(padrão)
+
+    
     
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
@@ -43,10 +46,12 @@ export class InicioPage {
       });
     });
   }
+
+
   novoCliente(){
     this.navCtrl.push('NovoClientePage')
   }
-  
+
   remove(obj : Cliente){
     let ref = firebase.firestore().collection("cliente");
     ref.doc(obj.id).delete()
@@ -61,5 +66,5 @@ export class InicioPage {
   atualiza(obj : Cliente){
     this.navCtrl.push('ClienteVisualizaPage',{'cliente' : obj})
   }
-  
+
 }
