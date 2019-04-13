@@ -48,7 +48,7 @@ export class InicioPage {
   }
 
 
-  novoCliente(){
+  novoCliente(){ 
     this.navCtrl.push('NovoClientePage')
   }
 

@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import firebase from 'firebase';
 import { Produto } from '../../model/produto';
 
+
 @IonicPage()
 @Component({
   selector: 'page-lista-produto',
@@ -63,4 +64,4 @@ atualiza(obj : Produto){
   this.navCtrl.push('ProdutoVisualizaPage',{'produto' : obj})
 }
 
-}
+} 
