@@ -3,7 +3,7 @@
     <!-- <button ion-button menuToggle>
       <ion-icon name="arrow-dropright-circle"></ion-icon>
     </button> -->
-    <ion-title>Home</ion-title>
+    <ion-title>Power Fitness</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -17,9 +17,14 @@
     <ion-item>
       <ion-input type="password" placeholder="Senha" #senha>Senha</ion-input>
     </ion-item>
-  
-  </ion-list>
 
+  </ion-list>
+  <br>
   <button ion-button color="dark" outline full (click)="login()">Entrar</button>
   <button ion-button color="dark" outline full (click)="cadastrar()">Novo Usuário</button>
+  <br>
+  <p align='middle'>OU</p>
+  <br>
+  <button ion-button color="dark" href"">Entrar com o facebook</button>
+  <button ion-button color="dark" >Entrar com o google</button>
 </ion-content>
