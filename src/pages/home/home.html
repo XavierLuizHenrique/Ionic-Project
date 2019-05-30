@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-list>
-
+    <br>
     <ion-item>
       <ion-input type="text" placeholder="E-Mail" #email>E-mail</ion-input>
     </ion-item>
@@ -21,10 +21,8 @@
   </ion-list>
   <br>
   <button ion-button color="dark" outline full (click)="login()">Entrar</button>
-  <button ion-button color="dark" outline full (click)="cadastrar()">Novo Usuário</button>
-  <br>
+  <button ion-button color="dark" outline full (click)="cadastrar()">Cadastro</button>
   <p align='middle'>OU</p>
-  <br>
-  <button ion-button color="dark" href"">Entrar com o facebook</button>
-  <button ion-button color="dark" >Entrar com o google</button>
+  <button ion-button color="primary" outline full href=""><ion-icon name="logo-facebook"></ion-icon> &nbsp;  Entrar com o facebook</button>
+  <button ion-button color="danger"  outline full href=""><ion-icon name="logo-google"></ion-icon> &nbsp; Entrar com o google</button>
 </ion-content>
