@@ -3,8 +3,6 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 import firebase from 'firebase';
 import { Cliente } from '../../model/cliente';
 import { query } from '@angular/core/src/animation/dsl';
-import { Produto } from '../../model/produto';
-
 
 @IonicPage()
 @Component({
@@ -19,7 +17,9 @@ export class InicioPage {
     
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
-    public menu : MenuController) {
+   
+    public menu : MenuController,
+  ) {
 
       this.firestore.settings(this.settings); // Aplicar Conf.padrão
   }
@@ -28,6 +28,16 @@ export class InicioPage {
     //console.log('ionViewDidLoad InicioPage');
     this.menu.enable(true)
     this.getList();
+  }
+
+  irParaTreino(){
+    this.navCtrl.push('TreinoBasicoPage');
+  }
+  irParaTreino2(){
+    this.navCtrl.push('TreinoIntermediarioPage');
+  }
+  irParaTreino3(){
+    this.navCtrl.push('TreinoAvançadoPage');
   }
 
   getList() {

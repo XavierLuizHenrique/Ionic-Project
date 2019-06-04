@@ -10,4 +10,4 @@ import { InicioPage } from './inicio';
     IonicPageModule.forChild(InicioPage),
   ],
 })
-export class InicioPageModule {}
+export class InicioPageModule {} 

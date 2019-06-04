@@ -1,59 +1,15 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>
-          Informações Pessoais
-        </ion-title>
-      </ion-navbar>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Informações Pessoais
+      </ion-title>
+    </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-
-    <ion-avatar>
-        <img src="../../assets/imgs/perfil.png"  width="100" height="100" align='center'>
-    </ion-avatar>
-    <br>
-    <br>
-    <ion-list radio-group>
-        <H3>
-          Gênero
-        </H3>
-      
-        <ion-item>
-          <ion-label>Masculino</ion-label>
-          <ion-radio checked="true" value="go"></ion-radio>
-        </ion-item>
-        <ion-item>
-          <ion-label>Feminino</ion-label>
-          <ion-radio value="rust"></ion-radio>
-        </ion-item>  
-      </ion-list>
-
-      <ion-item>
-          <ion-label>Altura</ion-label>
-          <ion-select [(ngModel)]="height">
-            <ion-option>150cm - 160cm</ion-option>
-            <ion-option>160cm - 170cm</ion-option>
-            <ion-option>170cm - 180cm</ion-option>
-            <ion-option>180cm - 190cm</ion-option>
-            <ion-option>190cm - 200cm</ion-option>
-          </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Peso</ion-label>
-            <ion-select [(ngModel)]="Weight">
-              <ion-option>50kg - 60kg</ion-option>
-              <ion-option>60kg - 70kg</ion-option>
-              <ion-option>70kg - 80kg</ion-option>
-              <ion-option>80kg - 90kg</ion-option>
-              <ion-option>90kg - 100kg</ion-option>
-            </ion-select>
-          </ion-item>
-          <br>
-          
-        <button ion-button color="secondary" href=''>Concluído</button>
 
 </ion-content>

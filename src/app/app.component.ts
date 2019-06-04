@@ -10,11 +10,12 @@ import { AngularFireAuth } from 'angularfire2/auth';
   templateUrl: 'app.html'
 })
 export class MyApp {
+  navCtrl: any;
   @ViewChild(Nav) nav: Nav;
 
   rootPage: string = 'HomePage';
 
-  pages: Array<{title: string, component: string}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform,
      public statusBar: StatusBar,
@@ -24,12 +25,13 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Informações Pessoais', component: 'InformacoesPessoaisPage' },
-      { title: 'Treinamento', component: 'TreinoPage'},
-      { title: 'Loja', component: 'LojaPage'},
-      { title: 'Sair', component: 'LogoffPage'},
-      { title: 'Configurações', component: 'ConfiguracoesPage'},
-      { title: 'Ajuda', component: 'AjudaPage'},
+      { title: 'Informações Pessoais', component: 'InformacoesPessoaisPage',icon: 'person' },
+      { title: 'Treinamento', component: 'TreinoPage',icon: "body"},
+      { title: 'Alimentação', component: 'AlimentacaoPage',icon: "nutrition"},
+      { title: 'Loja', component: 'LojaPage',icon: 'cart'},
+      { title: 'Sair', component: 'LogoffPage',icon: 'walk'},
+      { title: 'Configurações', component: 'ConfiguracoesPage',icon: 'settings'}, 
+      { title: 'Ajuda', component: 'AjudaPage',icon: 'hand'},
     ];
       
 
@@ -61,5 +63,9 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  irParaInicio(){
+    this.navCtrl.push('InicioPage');
   }
 }

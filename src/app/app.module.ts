@@ -11,8 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { firebaseConfig } from '../config/firebase.config';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import {AngularFireStorageModule} from 'angularfire2/storage'; 
-import { ClienteService } from '../service/cliente.service';
+import {AngularFireStorageModule} from 'angularfire2/storage';
 import { AngularFireStorage } from '@angular/fire/storage';
 
 @NgModule({
