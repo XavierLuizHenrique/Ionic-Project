@@ -4,13 +4,13 @@
         <ion-icon name="menu"></ion-icon>
       </button>
       <ion-title>
-        Informações Pessoais
+        Cadastro De Informações Pessoais
       </ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="formGroup" (ngSubmit)="atualizar()">
+  <form [formGroup]="formGroup" (ngSubmit)="cadastrar()">
     <ion-list>
       <ion-item>
         <ion-label floating>Nome</ion-label>
@@ -37,8 +37,7 @@
           <ion-input formControlName="email" type="text"></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button>Atualizar</button>
+    <button ion-button>Cadastrar</button>
   </form>
-
 
 </ion-content>

@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the InformacoesPessoaisVisualizaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { FormGroup, FormBuilder } from '@angular/forms';
+import firebase from 'firebase';
+import { InformacoesPessoais } from '../../model/informacoespessoais';
 
 @IonicPage()
 @Component({
@@ -15,11 +11,38 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InformacoesPessoaisVisualizaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  formGroup : FormGroup;
+  firestore = firebase.firestore();
+  settings = {timestampsInSnapshots : true};
+  informacoespessoais = new InformacoesPessoais();
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InformacoesPessoaisVisualizaPage');
-  }
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public formBuilder : FormBuilder) {
 
-}
+                this.firestore.settings(this.settings);
+
+                this.informacoespessoais = this.navParams.get('informacoespessoais');
+
+                this.formGroup = this.formBuilder.group({
+                  nomePessoal : [this.informacoespessoais.nomePessoal],
+                  idade : [this.informacoespessoais.idade],
+                  altura : [this.informacoespessoais.altura],
+                  peso : [this.informacoespessoais.peso],
+                  telefone : [this.informacoespessoais.telefone],
+                  email : [this.informacoespessoais.email],
+              })
+            }
+
+  atualizar(){
+    let ref =this.firestore.collection('informacoespessoais')
+    ref.doc(this.informacoespessoais.id).set(this.formGroup.value)
+      .then(() =>{
+      console.log('Atualizada com sucesso');
+      this.navCtrl.push('ListaInformacoesPessoaisPage');
+    }).catch(()=>{
+      console.log('Erro ao atualizar');
+    })
+  }
+  
+  } 

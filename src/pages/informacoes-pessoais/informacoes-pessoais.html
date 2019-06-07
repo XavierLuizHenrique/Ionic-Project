@@ -9,7 +9,35 @@
     </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
+  <form [formGroup]="formGroup" (ngSubmit)="cadastrar()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input formControlName="nomePessoal" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Idade</ion-label>
+        <ion-input formControlName="idade" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Altura</ion-label>
+        <ion-input formControlName="altura" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Peso</ion-label>
+      <ion-input formControlName="peso" type="text"></ion-input>
+    </ion-item>
+      <ion-item>
+          <ion-label floating>Telefone</ion-label>
+          <ion-input formControlName="telefone" type="text"></ion-input>
+        </ion-item>
+      <ion-item>
+          <ion-label floating>E-mail</ion-label>
+          <ion-input formControlName="email" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button>Cadastrar</button>
+  </form>
 
 </ion-content>

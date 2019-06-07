@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the AlimentacaoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-alimentacao',
@@ -20,6 +13,13 @@ export class AlimentacaoPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AlimentacaoPage');
+  }
+
+  irParaEmagrecer(){
+    this.navCtrl.push('EmagrecerPage');
+  }
+  irParaGanharMassa(){
+    this.navCtrl.push('GanharMassaPage');
   }
 
 }

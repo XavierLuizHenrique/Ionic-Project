@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Lista De Informações Pessoais
+      </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+      <ion-card *ngFor="let informacoespessoais of listaDeInformacoesPessoais">
+        <ion-card-header>
+          {{informacoespessoais?.nomePessoal}}
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-icon class="text"></ion-icon>{{informacoespessoais?.idade}}
+          <ion-icon class="text"></ion-icon>{{informacoespessoais?.altura}}
+          <ion-icon class="text"></ion-icon>{{informacoespessoais?.peso}}
+          <ion-icon class="text"></ion-icon>{{informacoespessoais?.telefone}}
+          <ion-icon class="text"></ion-icon>{{informacoespessoais?.email}}
+
+          <button (click)="atualiza(informacoespessoais)">ATUALIZAR</button>
+          
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
