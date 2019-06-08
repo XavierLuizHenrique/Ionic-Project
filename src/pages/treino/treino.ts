@@ -17,13 +17,13 @@ export class TreinoPage {
   }
 
   irParaBiceps(){
-    this.navCtrl.push('bicepsPage');
+    this.navCtrl.push('BicepsPage');
   }
   irParaCostas(){
     this.navCtrl.push('CostasPage');
   }
-  irParaPerna(){
-    this.navCtrl.push('PernaPage');
+  irParaPernas(){
+    this.navCtrl.push('PernasPage');
   }
   irParaAbdomen(){
     this.navCtrl.push('AbdomenPage');

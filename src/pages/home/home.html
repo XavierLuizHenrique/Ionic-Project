@@ -8,11 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-
-    <ion-avatar>
-        <img src="../../assets/imgs/perfil.png" width="100" height="100">
-    </ion-avatar>
-
+  
   <ion-list>
     <br>
     <ion-item>
@@ -25,9 +21,9 @@
 
   </ion-list>
   <br>
-  <button ion-button color="dark" (click)="login()">Entrar</button>
-  <button ion-button color="dark" (click)="cadastrar()">Cadastro</button>
+  <button ion-button color="dark" ion-button full (click)="login()">Entrar</button>
+  <button ion-button color="dark" ion-button full (click)="cadastrar()">Cadastro</button>
   <p align='middle'>OU</p>
-  <button ion-button color="primary" href=""><ion-icon name="logo-facebook"></ion-icon> &nbsp;Entrar com o facebook</button>
-  <button ion-button color="danger"  href=""><ion-icon name="logo-google"></ion-icon> &nbsp;Entrar com o google</button>
+  <button ion-button color="primary" ion-button full href=""><ion-icon name="logo-facebook"></ion-icon> &nbsp;Entrar com o facebook</button>
+  <button ion-button color="danger" ion-button full href=""><ion-icon name="logo-google"></ion-icon> &nbsp;Entrar com o google</button>
 </ion-content>
