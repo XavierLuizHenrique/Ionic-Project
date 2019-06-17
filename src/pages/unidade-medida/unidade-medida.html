@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Unidade de medida
+      </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-label>Unidade de Medida</ion-label>
+        <ion-select [(ngModel)]="unidadeMedida">
+          <ion-option value="metrico">Métrico</ion-option>
+          <ion-option value="imperial">Imperial</ion-option>
+
+        </ion-select>
+      </ion-item>
+    </ion-list>
+      </ion-content>
+      

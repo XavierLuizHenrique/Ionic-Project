@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="dark">
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
@@ -12,6 +12,16 @@
 
 <ion-content padding>
 
+  <button (click)="irParaInformacoesPessoais()" ion-button color="Dark" full >Informações Pessoais</button>
+
+  <button (click)="irParaUnidadeMedida()" ion-button color="Dark" full >Unidade de Medida</button>
   
+  <button (click)="irParaPais()" ion-button color="Dark" full >País/Região</button>
+
+  <button (click)="irParaParceiros()" ion-button color="Dark" full >Parceiros</button>
+  
+  <button (click)="irParaAjuda()" ion-button color="Dark" full >Ajuda</button>
+
+  <button (click)="irParaTermos()" ion-button color="Dark" full >Termos de Uso</button>
 
 </ion-content>
