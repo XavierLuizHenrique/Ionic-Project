@@ -3,11 +3,15 @@
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
+        
         <ion-title>
-          Power Fitness
-        </ion-title>
+          <ion-icon slot="start" name="contact" class="css" (click)="irParaInfo()" align="left"></ion-icon>
+            &nbsp; &nbsp; &nbsp; Power Fitness &nbsp; &nbsp; &nbsp;
+          <ion-icon slot="end" name="cart" class="css" (click)="irParaCarrinho()" align="right"></ion-icon> &nbsp; &nbsp; &nbsp;
+          <ion-icon slot="end" name="settings" class="css" (click)="irParaConfiguracoes()"></ion-icon>
+        </ion-title>        
+
       </ion-navbar>
-      <ion-searchbar placeholder="Pesquisar"></ion-searchbar>
 </ion-header>
 
 <ion-content padding>

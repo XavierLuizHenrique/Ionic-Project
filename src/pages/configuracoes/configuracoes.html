@@ -1,27 +1,57 @@
 <ion-header>
-    <ion-navbar color="dark">
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>
-          Configurações
-        </ion-title>
-      </ion-navbar>
+  <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Configurações
+      </ion-title>
+    </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
-  <button (click)="irParaInformacoesPessoais()" ion-button color="Dark" full >Informações Pessoais</button>
+  <ion-list>
+    <button (click)="irParaInformacoesPessoais()" ion-item>
 
-  <button (click)="irParaUnidadeMedida()" ion-button color="Dark" full >Unidade de Medida</button>
-  
-  <button (click)="irParaPais()" ion-button color="Dark" full >País/Região</button>
+      <ion-icon name="person"></ion-icon>
+        Informações Pessoais
+      </button>
+     
+      <button (click)="irParaUnidadeMedida()" ion-item>
+      <ion-icon name="cut"></ion-icon>
+        Unidade de Medida
+      </button>
+      
+      <button (click)="irParaPais()" ion-item >
+      <ion-icon name="compass"></ion-icon>
+        País/região
+      </button>
+        
+      <button (click)="irParaParceiros()" ion-item>
+      <ion-icon name="contacts"></ion-icon>
+        Parceiros
+      </button>          
+                   
+      <button (click)="irParaAjuda()" ion-item >
+      <ion-icon name="help-circle"></ion-icon>
+        Ajuda
+      </button>
+                                 
+      <button (click)="irParaTermos()" ion-item>
+      <ion-icon name="ios-information-circle-outline"></ion-icon>
+        Termos de Uso
+      </button>
 
-  <button (click)="irParaParceiros()" ion-button color="Dark" full >Parceiros</button>
-  
-  <button (click)="irParaAjuda()" ion-button color="Dark" full >Ajuda</button>
-
-  <button (click)="irParaTermos()" ion-button color="Dark" full >Termos de Uso</button>
-
+      </ion-list>      
 </ion-content>
+
+
+
+
+
+
+
+
+

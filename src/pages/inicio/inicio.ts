@@ -39,6 +39,12 @@ export class InicioPage {
   irParaTreino3(){
     this.navCtrl.push('TreinoAvançadoPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+  irParaInfo(){
+    this.navCtrl.push('InformacoesPessoaisListaPage');
+  }
 
   getList() {
     //selecionar a coleção(Dados que queremos listar), nesse caso = cliente 

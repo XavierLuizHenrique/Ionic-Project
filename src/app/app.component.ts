@@ -28,7 +28,11 @@ export class MyApp {
       { title: 'Inicio', component: 'InicioPage',icon: 'home'},
       { title: 'Treinamento', component: 'TreinoPage',icon: "body"},
       { title: 'Alimentação', component: 'AlimentacaoPage',icon: "nutrition"},
-      { title: 'Configurações', component: 'ConfiguracoesPage',icon: 'settings'},
+      { title: 'Frases Motivacionais', component: 'MotivacaoPage',icon: "book"},
+      { title: 'Cadastrar Cliente', component: 'NovoClientePage',icon: "person"},
+      { title: 'Lista de Clientes', component: 'ListaClientePage',icon: "person"},
+      { title: 'Cadastrar Produto', component: 'NovoProdutoPage',icon: "basket"},
+      { title: 'Lista de Produtos', component: 'ListaProdutoPage',icon: "basket"},
       { title: 'Loja', component: 'LojaPage',icon: 'cart'},
       { title: 'Sair', component: 'LogoffPage',icon: 'walk'},
     ];
