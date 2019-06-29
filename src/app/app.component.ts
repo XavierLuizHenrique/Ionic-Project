@@ -30,10 +30,11 @@ export class MyApp {
       { title: 'Alimentação', component: 'AlimentacaoPage',icon: "nutrition"},
       { title: 'Frases Motivacionais', component: 'MotivacaoPage',icon: "book"},
       { title: 'Cadastrar Cliente', component: 'NovoClientePage',icon: "person"},
-      { title: 'Lista de Clientes', component: 'ListaClientePage',icon: "person"},
-      { title: 'Cadastrar Produto', component: 'NovoProdutoPage',icon: "basket"},
-      { title: 'Lista de Produtos', component: 'ListaProdutoPage',icon: "basket"},
-      { title: 'Loja', component: 'LojaPage',icon: 'cart'},
+      { title: 'Lista de Clientes', component: 'ClienteListaPage',icon: "contacts"},
+      { title: 'Cadastrar Acessório', component: 'NovoAcessorioPage',icon: "clipboard"},
+      { title: 'Cadastrar Suplemento', component: 'NovoSuplementoPage',icon: "clipboard"},
+      { title: 'Cadastrar Aparelho', component: 'AparelhoCadastroPage',icon: "clipboard"},
+      { title: 'Loja', component: 'AparelhoListaPage',icon: 'cart'},
       { title: 'Sair', component: 'LogoffPage',icon: 'walk'},
     ];
       

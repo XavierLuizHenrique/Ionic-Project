@@ -35,5 +35,8 @@ irParaAjuda(){
 irParaInformacoesPessoais(){
   this.navCtrl.push('InformacoesPessoaisListaPage');
 }
+irParaCadastrarInformacoesPessoais(){
+  this.navCtrl.push('InformacoesPessoaisCadastroPage');
+}
 
   }

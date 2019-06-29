@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Lista De Cliente
+      </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <button ion-button full (click)="irNovoCliente()">Novo Cliente</button>
+
+      <ion-card *ngFor="let cliente of listaDeCliente">
+      
+        <ion-card-content>
+          <ion-icon class="text">Nome:&nbsp;</ion-icon>{{cliente?.nome}}
+          <br />
+          Telefone:&nbsp;<ion-icon class="text"></ion-icon>{{cliente?.telefone}}
+          <br />
+          Email:&nbsp;<ion-icon class="text"></ion-icon>{{cliente?.email}}
+          <br />
+          <br />
+          <button (click)="atualiza(cliente)" ion-button color='primary'>Atualizar</button>
+          <button (click)="remove(cliente)" ion-button color='danger'>Remover</button>
+          
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
