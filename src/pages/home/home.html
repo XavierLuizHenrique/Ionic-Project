@@ -1,41 +1,40 @@
 <ion-header>
-  <ion-navbar color="dark">
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
-  <!--blackground -->
-  <div class="fd-login">
-  <br />
-
-  <div class="padding-40">
-    <ion-list>
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
-    <ion-item>
-      <ion-input type="text" placeholder="E-Mail" #email>E-mail</ion-input>
-    </ion-item>
+    <ion-navbar color="dark">
+      <ion-title>Login</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <!--blackground -->
+    <div class="fd-login">
+    <br />
+  
+    <div class="padding-40">
+      <ion-list>
+  
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="E-Mail" #email>E-mail</ion-input>
+      </ion-item>
+              
+      <ion-item>
+        <ion-input type="password" placeholder="Senha" #senha>Senha</ion-input>
+      </ion-item>
             
-    <ion-item>
-      <ion-input type="password" placeholder="Senha" #senha>Senha</ion-input>
-    </ion-item>
-          
-      </ion-list>
-  </div>
+        </ion-list>
+    </div>
+  
+        <div class="center mg-top-20">
 
-      <div class="center mg-top-20">
-        <button ion-button color="light" ion-button full (click)="login()">Entrar</button>
-        <button ion-button color="light" ion-button full (click)="cadastrar()">Cadastro</button>
-        <h5 align='middle'>ou</h5>
-        <button ion-button color="primary" ion-button full >Entrar pelo Facebook</button>
-        <button ion-button color="danger" ion-button full >Entrar pelo Google</button>
-      </div>
-      </div>
-      </ion-content>
+          <button ion-button color="success" ion-button full (click)="login()">Entrar</button>
+          <button ion-button color="light" ion-button full (click)="cadastrar()">Cadastrar</button>
+
+        </div>
+        </div>
+        </ion-content>

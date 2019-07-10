@@ -24,6 +24,8 @@ export class ClientePage {
                     nome : [''],
                     telefone : [''],           
                     email : [''],
+                    cidade : [''],
+                    endereco : [''],
                   })
     }
   

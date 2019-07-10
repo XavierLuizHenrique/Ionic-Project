@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+          Loja
+        </ion-title>
+      </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+
+      <button ion-button full (click)="irAparelho()">Aparelho</button>
+      <button ion-button full (click)="irAcessorio()">Acessório</button>
+      <button ion-button full (click)="irSuplemento()">Suplemento</button>
+  
+        <ion-card *ngFor="let suplementos of listaDeSuplementos">
+        
+          <ion-card-content>
+            <ion-icon class="text">Nome:&nbsp;</ion-icon>{{suplementos?.nomesuplementos}}
+            <br />
+            <br />
+            Preço:&nbsp;<ion-icon class="text"></ion-icon>{{suplementos?.preco}}
+            <br />
+            Categoria:&nbsp;<ion-icon class="text"></ion-icon>{{suplementos?.categoria}}
+            <br />
+            Descrição:&nbsp;<ion-icon class="text"></ion-icon>{{suplementos?.descricao}}
+            <br />
+            <br />
+            <button (click)="atualiza(suplementos)" ion-button color='primary'>Atualizar</button>
+            <button (click)="remove(suplementos)" ion-button color='danger'>Remover</button>
+            
+          </ion-card-content>
+        </ion-card>
+  
+  </ion-content>

@@ -1,13 +1,11 @@
-.inicio{
+ion-content{
     width: 100%;
-    background-image: url('/assets/imgs/');
+    
+    background-image: url('../assets/imgs/logo.PNG');
     background-size: cover;
     background-position: center;
 }
 
-.css{
-    color: white;
-    height: 100%;
-  }
-  
-  
+ion-title{
+    text-align: center;
+}

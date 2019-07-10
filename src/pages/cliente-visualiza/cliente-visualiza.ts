@@ -31,6 +31,9 @@ export class ClienteVisualizaPage {
                   nome : [this.cliente.nome],
                   telefone : [this.cliente.telefone],
                   email : [this.cliente.email],
+                  cidade : [this.cliente.cidade],
+                  endereco : [this.cliente.endereco],
+                  
               })
             }
 
