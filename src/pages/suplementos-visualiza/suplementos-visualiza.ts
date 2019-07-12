@@ -43,5 +43,9 @@ export class suplementosVisualizaPage {
       console.log('Erro ao atualizar');
     })
   }
+  
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 } 

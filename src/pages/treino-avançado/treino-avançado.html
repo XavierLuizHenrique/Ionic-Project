@@ -1,14 +1,19 @@
 <ion-header>
-  <ion-navbar color="dark">
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>
-        Treino Avançado
-      </ion-title>
-    </ion-navbar>
-</ion-header>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        
+        <ion-title> Treino Avançado </ion-title>        
 
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irParaConfiguracoes()">
+                <ion-icon slot="end" name="settings" class="css" ></ion-icon>
+            </button>
+        </ion-buttons>
+
+      </ion-navbar>
+</ion-header>
 
 <ion-content padding>
     <div class='letra'>

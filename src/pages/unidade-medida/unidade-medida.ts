@@ -21,5 +21,8 @@ export class UnidadeMedidaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad UnidadeMedidaPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

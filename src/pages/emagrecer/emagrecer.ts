@@ -21,5 +21,8 @@ export class EmagrecerPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EmagrecerPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

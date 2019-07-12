@@ -21,5 +21,8 @@ export class TreinoAvançadoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TreinoAvançadoPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

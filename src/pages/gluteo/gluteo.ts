@@ -21,5 +21,8 @@ export class GluteoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad GluteoPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

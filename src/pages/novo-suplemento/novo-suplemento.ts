@@ -42,4 +42,8 @@ export class  NovoSuplementoPage {
 
   }
 
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+
 }

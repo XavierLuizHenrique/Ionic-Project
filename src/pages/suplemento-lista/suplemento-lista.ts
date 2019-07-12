@@ -69,5 +69,8 @@ irAcessorio(){
 irSuplemento(){
   this.navCtrl.push('SuplementoListaPage');
 }
+irParaConfiguracoes(){
+  this.navCtrl.push('ConfiguracoesPage');
+}
 
 } 

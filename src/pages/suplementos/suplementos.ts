@@ -28,6 +28,10 @@ export class SuplementosPage {
                 })
   }
 
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+
   cadastrar(){
     let ref =this.firestore.collection('suplementos')
     ref.add(this.formGroup.value)

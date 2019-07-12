@@ -21,5 +21,8 @@ export class CostasPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CostasPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

@@ -40,4 +40,8 @@ cadastrar(){
 
 }
 
+irParaConfiguracoes(){
+  this.navCtrl.push('ConfiguracoesPage');
+}
+
 }

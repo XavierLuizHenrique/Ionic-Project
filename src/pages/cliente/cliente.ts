@@ -28,6 +28,10 @@ export class ClientePage {
                     endereco : [''],
                   })
     }
+
+    irParaConfiguracoes(){
+      this.navCtrl.push('ConfiguracoesPage');
+    }
   
     cadastrar(){
       let ref =this.firestore.collection('cliente')

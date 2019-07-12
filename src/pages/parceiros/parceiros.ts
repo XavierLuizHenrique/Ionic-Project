@@ -22,4 +22,8 @@ export class ParceirosPage {
     console.log('ionViewDidLoad ParceirosPage');
   }
 
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+
 }

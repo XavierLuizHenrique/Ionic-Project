@@ -21,5 +21,8 @@ export class TreinoBasicoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TreinoBasicoPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

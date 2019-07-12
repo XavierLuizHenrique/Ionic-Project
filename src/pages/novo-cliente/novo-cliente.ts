@@ -31,6 +31,10 @@ export class NovoClientePage {
                 })
   }
 
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+
   cadastrar(){
       let ref =this.firestore.collection('cliente')
       ref.add(this.formGroup.value)

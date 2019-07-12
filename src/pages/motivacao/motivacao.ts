@@ -15,5 +15,8 @@ export class MotivacaoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MotivacaoPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

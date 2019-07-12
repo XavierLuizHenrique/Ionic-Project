@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        
+        <ion-title> Lista de Acessório </ion-title>        
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irParaConfiguracoes()">
+                <ion-icon slot="end" name="settings" class="css" ></ion-icon>
+            </button>
+        </ion-buttons>
+
+      </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+      <ion-card *ngFor="let acessorio of listaDeAcessorios">
+      
+        <ion-card-content>
+          <ion-icon class="text">Nome:&nbsp;</ion-icon>{{acessorio?.nomeAcessorio}}
+          <br />
+          <br />
+          Descrição:&nbsp;<ion-icon class="text"></ion-icon>{{acessorio?.descricao}}
+          <br />
+          Preço:&nbsp;<ion-icon class="text"></ion-icon>{{acessorio?.preco}}
+          <br />
+          <br />
+          <button (click)="atualiza(acessorio)" ion-button color='primary'>Atualizar</button>
+          <button (click)="remove(acessorio)" ion-button color='danger'>Remover</button>
+          
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>

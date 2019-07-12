@@ -22,4 +22,8 @@ export class OmbroPage {
     console.log('ionViewDidLoad OmbroPage');
   }
 
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+
 }

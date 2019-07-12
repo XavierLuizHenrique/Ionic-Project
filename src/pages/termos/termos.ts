@@ -21,5 +21,8 @@ export class TermosPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TermosPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

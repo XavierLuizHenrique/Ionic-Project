@@ -22,4 +22,8 @@ export class PernasPage {
     console.log('ionViewDidLoad PernasPage');
   }
 
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+
 }

@@ -3,12 +3,18 @@
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>
-          Nossos Parceiros
-        </ion-title>
+        
+        <ion-title> Nossos Parceiros </ion-title>        
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irParaConfiguracoes()">
+                <ion-icon slot="end" name="settings" class="css" ></ion-icon>
+            </button>
+        </ion-buttons>
+
       </ion-navbar>
-  </ion-header>
-  
+</ion-header>
+
   <ion-content padding>
     <br />
     <img src="../../assets/imgs/reebok.png" width="150" height="100" align='center'>

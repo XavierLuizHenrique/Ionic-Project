@@ -21,5 +21,8 @@ export class AbdomenPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbdomenPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

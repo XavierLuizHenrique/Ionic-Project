@@ -64,4 +64,8 @@ irNovoCliente(){
   this.navCtrl.push('NovoClientePage');
 }
 
+irParaConfiguracoes(){
+  this.navCtrl.push('ConfiguracoesPage');
+}
+
 } 

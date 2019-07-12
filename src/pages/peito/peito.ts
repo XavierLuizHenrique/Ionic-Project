@@ -22,4 +22,8 @@ export class PeitoPage {
     console.log('ionViewDidLoad PeitoPage');
   }
 
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+
 }

@@ -21,5 +21,8 @@ export class AlimentacaoPage {
   irParaGanharMassa(){
     this.navCtrl.push('GanharMassaPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

@@ -21,5 +21,8 @@ export class GanharMassaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad GanharMassaPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

@@ -31,10 +31,10 @@ export class MyApp {
       { title: 'Frases Motivacionais', component: 'MotivacaoPage',icon: "book"},
       { title: 'Cadastrar Cliente', component: 'NovoClientePage',icon: "person"},
       { title: 'Lista de Clientes', component: 'ClienteListaPage',icon: "contacts"},
-      { title: 'Cadastrar Acessório', component: 'NovoAcessorioPage',icon: "clipboard"},
+      { title: 'Cadastrar Acessório', component: 'CadastrarAcessorioPage',icon: "clipboard"},
       { title: 'Cadastrar Suplemento', component: 'NovoSuplementoPage',icon: "clipboard"},
       { title: 'Cadastrar Aparelho', component: 'AparelhoCadastroPage',icon: "clipboard"},
-      { title: 'Loja', component: 'AparelhoListaPage',icon: 'cart'},
+      { title: 'Loja', component: 'LojaPage',icon: 'cart'},
       { title: 'Sair', component: 'LogoffPage',icon: 'walk'},
     ];
       

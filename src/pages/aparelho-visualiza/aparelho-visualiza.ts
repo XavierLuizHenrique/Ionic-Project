@@ -41,5 +41,9 @@ export class AparelhoVisualizaPage {
       console.log('Erro ao atualizar');
     })
   }
+
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
   
   } 

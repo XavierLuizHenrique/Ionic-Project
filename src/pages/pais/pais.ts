@@ -22,4 +22,8 @@ export class PaisPage {
     console.log('ionViewDidLoad PaisPage');
   }
 
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
+
 }

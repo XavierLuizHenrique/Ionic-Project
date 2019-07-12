@@ -37,7 +37,8 @@ export class TreinoPage {
   irParaGluteo(){
     this.navCtrl.push('GluteoPage');
   }
-  
-
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

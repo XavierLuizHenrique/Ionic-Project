@@ -21,5 +21,8 @@ export class BicepsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BicepsPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

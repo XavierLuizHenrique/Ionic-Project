@@ -41,6 +41,10 @@ export class ClienteVisualizaPage {
       this.DownloadFoto();
     }
 
+    irParaConfiguracoes(){
+      this.navCtrl.push('ConfiguracoesPage');
+    }
+
   atualizar(){
     let ref =this.firestore.collection('cliente')
     ref.doc(this.cliente.id).set(this.formGroup.value)

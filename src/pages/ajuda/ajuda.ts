@@ -21,5 +21,8 @@ export class AjudaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AjudaPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

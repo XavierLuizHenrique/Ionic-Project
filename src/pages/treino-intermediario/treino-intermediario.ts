@@ -21,5 +21,8 @@ export class TreinoIntermediarioPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TreinoIntermediarioPage');
   }
+  irParaConfiguracoes(){
+    this.navCtrl.push('ConfiguracoesPage');
+  }
 
 }

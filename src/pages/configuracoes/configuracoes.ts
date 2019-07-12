@@ -38,5 +38,8 @@ irParaInformacoesPessoais(){
 irParaCadastrarInformacoesPessoais(){
   this.navCtrl.push('InformacoesPessoaisCadastroPage');
 }
+irParaConfiguracoes(){
+  this.navCtrl.push('ConfiguracoesPage');
+}
 
   }

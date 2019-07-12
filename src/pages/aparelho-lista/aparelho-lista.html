@@ -1,19 +1,21 @@
 <ion-header>
-  <ion-navbar color="dark">
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>
-        Loja
-      </ion-title>
-    </ion-navbar>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        
+        <ion-title> Loja </ion-title>        
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irParaConfiguracoes()">
+                <ion-icon slot="end" name="settings" class="css" ></ion-icon>
+            </button>
+        </ion-buttons>
+
+      </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
-    <button ion-button full (click)="irAparelho()">Aparelho</button>
-    <button ion-button full (click)="irAcessorio()">Acessório</button>
-    <button ion-button full (click)="irSuplemento()">Suplemento</button>
 
       <ion-card *ngFor="let aparelho of listaDeAparelhos">
       

@@ -3,9 +3,15 @@
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>
-          Frases Motivacionais
-        </ion-title>
+        
+        <ion-title> Frases Motivacionais </ion-title>        
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irParaConfiguracoes()">
+                <ion-icon slot="end" name="settings" class="css" ></ion-icon>
+            </button>
+        </ion-buttons>
+
       </ion-navbar>
 </ion-header>
 
