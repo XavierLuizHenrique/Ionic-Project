@@ -4,8 +4,8 @@
           <ion-icon name="menu"></ion-icon>
         </button>
         
-        <ion-title> Loja </ion-title>        
-
+        <ion-title> Loja </ion-title> 
+        
         <ion-buttons end>
             <button ion-button icon-only (click)="irParaConfiguracoes()">
                 <ion-icon slot="end" name="settings" class="css" ></ion-icon>
@@ -17,15 +17,22 @@
 
   <ion-content padding>
 
-        <ion-slides>
+    <div class="letra">
+        <h2 align="center">Escolha a categoria do seu Produto!</h2>
+    </div>
+
+        <ion-slides pager="true">
             <ion-slide>
-                <img src="../assets/imgs/f1.jpg">
+                <p >Acessórios</p>
+                <img src="../assets/imgs/1.PNG" width="80%" height="200" align='center' (click)="IrParaAcessorio()">
             </ion-slide>
             <ion-slide>
-                <img src="../assets/imgs/f1.jpg">
+                <p>Suplementos</p>
+                <img src="../assets/imgs/2.PNG" width="80%" height="200" align='center' (click)="IrParaSuplemento()">
             </ion-slide>
             <ion-slide>
-                <img src="../assets/imgs/f1.jpg">
+                <p>Aparelhos</p>
+                <img src="../assets/imgs/3.PNG" width="80%" height="200" align='center' (click)="IrParaAparelho()">
             </ion-slide>
           </ion-slides>
 

@@ -19,9 +19,9 @@ export class AparelhoService {
 
         ref.get().then(query => {
             query.forEach(doc => {
-                let a = new Aparelho();
-                a.setDados(doc.data());
-                listaDeAparelhos.push(a);
+                let p = new Aparelho();
+                p.setDados(doc.data());
+                listaDeAparelhos.push(p);
             });
         });
         return listaDeAparelhos;

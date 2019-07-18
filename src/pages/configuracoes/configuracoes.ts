@@ -16,13 +16,6 @@ ionViewDidLoad() {
    console.log('ionViewDidLoad ConfiguracoesPage');
 }
 
-irParaUnidadeMedida(){
-  this.navCtrl.push('UnidadeMedidaPage');
-
-}
-irParaPais(){
-  this.navCtrl.push('PaisPage');
-}
 irParaTermos(){
   this.navCtrl.push('TermosPage');
 }
@@ -37,9 +30,6 @@ irParaInformacoesPessoais(){
 }
 irParaCadastrarInformacoesPessoais(){
   this.navCtrl.push('InformacoesPessoaisCadastroPage');
-}
-irParaConfiguracoes(){
-  this.navCtrl.push('ConfiguracoesPage');
 }
 
   }

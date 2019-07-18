@@ -14,16 +14,16 @@ export class AcessorioService {
     }
 
     getList() : Acessorio[] {
-            let listaDeAcessorio : Acessorio[] = [];
+            let listaDeAcessorios: Acessorio[] = [];
         var ref = this.firestore.collection("acessorio");
 
         ref.get().then(query => {
             query.forEach(doc => {
                 let a = new Acessorio();
                 a.setDados(doc.data());
-                listaDeAcessorio.push(a);
+                listaDeAcessorios.push(a);
             });
         });
-        return listaDeAcessorio;
+        return listaDeAcessorios;
     }
 }

@@ -29,14 +29,14 @@ export class AparelhoListaPage {
   
   getList() {
   
-    var ref = firebase.firestore().collection("Aparelho");
+    var ref = firebase.firestore().collection("aparelho");
   
     ref.get().then(query =>{
       query.forEach(doc =>{
-        let a = new Aparelho();
-        a.setDados(doc.data());
-        a.id = doc.id;
-        this.listaDeAparelhos.push(a);
+        let p = new Aparelho();
+        p.setDados(doc.data());
+        p.id = doc.id;
+        this.listaDeAparelhos.push(p);
       });
     });
   }
@@ -71,6 +71,9 @@ export class AparelhoListaPage {
   }
   irParaConfiguracoes(){
     this.navCtrl.push('ConfiguracoesPage');
+  }
+  irNovoAparelho(){
+    this.navCtrl.push('AparelhoCadastroPage');
   }
   
   } 

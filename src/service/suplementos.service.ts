@@ -1,5 +1,5 @@
 import firebase from "firebase";
-import { suplementos } from "../model/suplementos";
+import { Suplemento } from "../model/suplementos";
 import { Injectable } from "@angular/core";
 
 @Injectable()
@@ -13,13 +13,13 @@ export class SuplementosService {
         this.firestore.settings(this.settings);
     }
 
-    getList() : suplementos[] {
-            let listaSuplementos : suplementos[] = [];
+    getList() : Suplemento[] {
+            let listaSuplementos : Suplemento[] = [];
         var ref = this.firestore.collection("suplementos");
 
         ref.get().then(query => {
             query.forEach(doc => {
-                let s = new suplementos();
+                let s = new Suplemento();
                 s.setDados(doc.data());
                 listaSuplementos.push(s);
             });

@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      
+      <ion-title> Carrinho de Compra </ion-title>        
+
+      <ion-buttons end>
+          <button ion-button icon-only (click)="irParaConfiguracoes()">
+              <ion-icon slot="end" name="settings" class="css" ></ion-icon>
+          </button>
+      </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div class="letra">
+
+    <br /> 
+
+    <ion-grid>
+        <ion-row>
+            <ion-col size="2">
+                <img src="../../assets/imgs/Powerfitness.jpg" width="100" height="100" align='middle'>
+            </ion-col>
+            <ion-col size="10">
+                <button ion-button full color="primary" >+ Detalhes</button>
+                <button ion-button full color="danger" >Excluir</button>     
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <h6>Nome Produto:</h6>
+    <h6>Preço do Produto:</h6>
+    
+    
+    <br />
+    <br />
+
+
+    <ion-grid>
+        <ion-row>
+            <ion-col size="3">
+                <img src="../../assets/imgs/Powerfitness.jpg" width="100" height="100" align='middle'>
+            </ion-col>
+            <ion-col size="9">
+                <button ion-button full color="primary" >+ Detalhes</button>
+                <button ion-button full color="danger" >Excluir</button>     
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    
+    <h6>Nome Produto:</h6>
+    <h6>Preço do Produto:</h6>
+
+
+    <br />
+    <br />
+
+
+    <ion-grid>
+        <ion-row>
+            <ion-col size="3">
+                <img src="../../assets/imgs/Powerfitness.jpg" width="100" height="100" align='middle'>
+            </ion-col>
+            <ion-col size="9">
+                <button ion-button full color="primary" >+ Detalhes</button>
+                <button ion-button full color="danger" >Excluir</button>                
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    
+    <h6>Nome Produto:</h6>
+    <h6>Preço do Produto:</h6>
+
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+  <h5 align="left">Nº de Itens: </h5>
+  <h5 align="left">Valor Total: </h5>
+  
+  <button ion-button color="success" ion-button full (click)="IrParaEndereco()" >Finalizar Pedido</button>
+  <button ion-button color="dark" ion-button full (click)="IrParaLoja()" >Adicionar mais Produto(s)</button>
+
+</div>
+
+</ion-content>

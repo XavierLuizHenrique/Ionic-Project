@@ -18,8 +18,17 @@ export class LojaPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad(){
     console.log('ionViewDidLoad LojaPage');
+  }
+  IrParaSuplemento(){
+    this.navCtrl.push('SuplementoListaPage');
+  }
+  IrParaAparelho(){
+    this.navCtrl.push('AparelhoListaPage');
+  }
+  IrParaAcessorio(){
+    this.navCtrl.push('AcessorioListaPage');
   }
   irParaConfiguracoes(){
     this.navCtrl.push('ConfiguracoesPage');

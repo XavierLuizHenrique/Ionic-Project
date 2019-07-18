@@ -1,10 +1,10 @@
 export class InformacoesPessoais {
     id : string;
     nomePessoal : String;
-    idade : string;
-    altura : string;
-    peso : string;
-    telefone : String;
+    idade : number;
+    altura : number;
+    peso : number;
+    telefone : number;
     email : String;
     
 setDados(obj : any){

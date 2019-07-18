@@ -2,7 +2,7 @@ export class Acessorio {
     id : string;
     nomeAcessorio : String;
     descricao : String;
-    preco : String;
+    preco : number;
 
 
 setDados(obj : any){

@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        
+        <ion-title> Formulário </ion-title>        
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irParaConfiguracoes()">
+                <ion-icon slot="end" name="settings" class="css" ></ion-icon>
+            </button>
+        </ion-buttons>
+
+      </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="formGroup" (ngSubmit)="cadastrar()">
+    <ion-list>
+        <h4 align="center">Complete Seu Cadastro</h4>
+        <ion-item>
+          <ion-label floating>Identidade</ion-label>
+          <ion-input formControlName="rg" type="text"></ion-input>
+        </ion-item>      
+        <ion-item>
+          <ion-label floating>CPF</ion-label>
+          <ion-input formControlName="cpf" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input formControlName="email" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Telefone</ion-label>
+          <ion-input formControlName="telefone" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>CEP</ion-label>
+          <ion-input formControlName="cep" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Cidade</ion-label>
+          <ion-input formControlName="cidade" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Rua</ion-label>
+          <ion-input formControlName="rua" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Ponto de Referência</ion-label>
+          <ion-input formControlName="pr" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Pagamento: Dinheiro ou Cartão</ion-label>
+          <ion-input formControlName="pagamento" type="text"></ion-input>
+        </ion-item>
+        <br>
+        <br>
+
+    </ion-list>
+    <button ion-button (click)="irParaFinal()" align="center">Finalizar</button>
+  </form>
+
+</ion-content>

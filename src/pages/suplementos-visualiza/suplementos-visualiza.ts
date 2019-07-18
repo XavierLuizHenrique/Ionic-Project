@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import firebase from 'firebase';
-import { suplementos } from '../../model/suplementos';
+import { Suplemento } from '../../model/suplementos';
 
 
 @IonicPage()
@@ -15,7 +15,7 @@ export class suplementosVisualizaPage {
   formGroup : FormGroup;
   firestore = firebase.firestore();
   settings = {timestampsInSnapshots : true};
-  suplementos = new suplementos();
+  suplementos = new Suplemento();
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -28,7 +28,6 @@ export class suplementosVisualizaPage {
                 this.formGroup = this.formBuilder.group({
                   nomesuplementos : [this.suplementos.nomesuplementos],
                   preco : [this.suplementos.preco],
-                  categoria : [this.suplementos.categoria],
                   descricao : [this.suplementos.descricao],
               })
             }

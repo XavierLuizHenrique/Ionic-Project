@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        
+        <ion-title> Lista de Formularios </ion-title>        
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irParaConfiguracoes()">
+                <ion-icon slot="end" name="settings" class="css" ></ion-icon>
+            </button>
+        </ion-buttons>
+
+      </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <button ion-button full (click)="irNovoEndereco()">Novo Formulario</button>
+
+      <ion-card *ngFor="let endereco of listaDeEnderecos">
+      
+        <ion-card-content>
+          <ion-icon class="text">Identidade:&nbsp;</ion-icon>{{endereco?.Identidade}}
+          <br />
+          CPF:&nbsp;<ion-icon class="text"></ion-icon>{{endereco?.cpf}}
+          <br />
+          Email:&nbsp;<ion-icon class="text"></ion-icon>{{endereco?.email}}
+          <br />
+          Telefone:&nbsp;<ion-icon class="text"></ion-icon>{{endereco?.telefone}}
+          <br />
+          CEP:&nbsp;<ion-icon class="text"></ion-icon>{{endereco?.cep}}
+          <br />
+          Cidade:&nbsp;<ion-icon class="text"></ion-icon>{{endereco?.cidade}}
+          <br />
+          Rua:&nbsp;<ion-icon class="text"></ion-icon>{{endereco?.rua}}
+          <br />
+          Ponto de Referência:&nbsp;<ion-icon class="text"></ion-icon>{{endereco?.pr}}
+          <br />
+          Pagamento: Dinheiro ou Cartão&nbsp;<ion-icon class="text"></ion-icon>{{endereco?.pagamento}}
+          <br />
+          <button (click)="atualiza(cliente)" ion-button color='primary'>Atualizar</button>
+          <button (click)="remove(cliente)" ion-button color='danger'>Remover</button>
+          
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>

@@ -35,7 +35,7 @@ export class  NovoSuplementoPage {
     ref.add(this.formGroup.value)
       .then(resp =>{
       console.log('Cadastrado com sucesso');
-      this.navCtrl.setRoot('ListaSuplementosPage');
+      this.navCtrl.setRoot('SuplementoListaPage');
     }).catch(()=>{
       console.log('Erro ao cadastrar');
     })

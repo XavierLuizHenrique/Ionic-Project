@@ -4,7 +4,13 @@
           <ion-icon name="menu"></ion-icon>
         </button>
         
-        <ion-title> Loja </ion-title>        
+        <ion-title> Aparelhos </ion-title>   
+        
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irParaConfiguracoes()">
+                <ion-icon slot="end" name="cart" class="css" ></ion-icon>
+            </button>
+        </ion-buttons>
 
         <ion-buttons end>
             <button ion-button icon-only (click)="irParaConfiguracoes()">
@@ -17,17 +23,20 @@
 
 <ion-content padding>
 
+    <button ion-button full (click)="irNovoAparelho()">Novo Aparelho</button>
+
       <ion-card *ngFor="let aparelho of listaDeAparelhos">
       
         <ion-card-content>
-          <ion-icon class="text">Nome:&nbsp;</ion-icon>{{aparelho?.nomeAparelho}}
+          <ion-icon class="text"></ion-icon>{{aparelho?.nomeAparelho}}
           <br />
-          <br />
-          Descrição:&nbsp;<ion-icon class="text"></ion-icon>{{aparelho?.descricao}}
           <br />
           Preço:&nbsp;<ion-icon class="text"></ion-icon>{{aparelho?.preco}}
           <br />
+          Descrição:&nbsp;<ion-icon class="text"></ion-icon>{{aparelho?.descricao}}
           <br />
+          <br />
+          <button (click)="adicionar(acessorio)" ion-button color='secondary'>Adicionar</button>
           <button (click)="atualiza(aparelho)" ion-button color='primary'>Atualizar</button>
           <button (click)="remove(aparelho)" ion-button color='danger'>Remover</button>
           

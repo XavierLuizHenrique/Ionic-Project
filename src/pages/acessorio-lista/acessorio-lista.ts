@@ -11,7 +11,7 @@ import { Acessorio } from '../../model/acessorio';
 export class AcessorioListaPage {
 
 
-    listaDeAcessorio : Acessorio[] = [];
+    listaDeAcessorios : Acessorio[] = [];
     firestore = firebase.firestore(); //Inicio um instancia do banco 
     settings = {timestampsInSnapshots : true} //linha sempre utilizada(padrão)
     
@@ -30,14 +30,14 @@ export class AcessorioListaPage {
   
   getList() {
   
-    var ref = firebase.firestore().collection("Acessorio");
+    var ref = firebase.firestore().collection("acessorio");
   
     ref.get().then(query =>{
       query.forEach(doc =>{
         let a = new Acessorio();
         a.setDados(doc.data());
         a.id = doc.id;
-        this.listaDeAcessorio.push(a);
+        this.listaDeAcessorios.push(a);
       });
     });
   }
@@ -50,7 +50,7 @@ export class AcessorioListaPage {
     let ref = firebase.firestore().collection("acessorio");
     ref.doc(obj.id).delete()
       .then(()=>{
-        this.listaDeAcessorio = [];
+        this.listaDeAcessorios = [];
         this.getList();
       }).catch(()=>{
         console.log('Erro ao atualizar');
@@ -62,6 +62,9 @@ export class AcessorioListaPage {
   }
   irParaConfiguracoes(){
     this.navCtrl.push('ConfiguracoesPage');
+  }
+  irNovoAcessorio(){
+    this.navCtrl.push('AparelhoCadastroPage');
   }
   
 } 
